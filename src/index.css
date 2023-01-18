@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  /* Variables */
+ --button_radius: 0.75em;
+ --button_color: #fff;
+ --button_outline_color: #000000;
+ font-size: 17px;
+ font-weight: bold;
+ border: none;
+ border-radius: var(--button_radius);
+ background: var(--button_outline_color);
+}
+
+.button_top {
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ box-sizing: border-box;
+ border: 2px solid var(--button_outline_color);
+ border-radius: var(--button_radius);
+ padding: 0.5em 1em;
+ background: var(--button_color);
+ color: var(--button_outline_color);
+ transition: transform 0.1s ease;
+}
+
+.btn:hover .button_top {
+  /* Pull the button upwards when hovered */
+ transform: translateY(-0.33em);
+}
+
+.btn:active .button_top {
+  /* Push the button downwards when pressed */
+ transform: translateY(0);
+}
