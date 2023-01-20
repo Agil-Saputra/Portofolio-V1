@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+strong {
+  color :#FFA047;
+  /* background-color : #333;
+  border-radius : 3px; */
+}
+
 .btn {
   /* Variables */
- --button_radius: 0.75em;
- --button_color: #fff;
- --button_outline_color: #000000;
+ --button_radius: 0.5em;
+ --button_color: #FFA047;
+ --button_outline_color: #56180A;
  font-size: 17px;
  font-weight: bold;
  border: none;
@@ -36,3 +42,25 @@
   /* Push the button downwards when pressed */
  transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .btn{
+    font-size: 12px;
+  }
+}
+
+
+.link-hover:hover{
+  color :rgb(73,222,128);
+  background-color : #fff;
+  transform:translateY(-5px)
+}
+
+.link-hover:active{
+  transform:translateY(5px)
+}
+
+.spcl-shadow{
+  box-shadow: 0.4rem 0.3rem 0 0.3rem #56180A;
+}
+
