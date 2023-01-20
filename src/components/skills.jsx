@@ -1,6 +1,6 @@
 import React from "react";
 import { GrReactjs } from "react-icons/gr";
-import { SiJavascript, SiTypescript, SiRedux, SiSass, SiBootstrap, SiNodedotjs, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiRedux, SiSass, SiBootstrap, SiNodedotjs, SiTailwindcss, } from "react-icons/si";
 
 const skills = () => {
   const size = 40;
@@ -19,6 +19,20 @@ const skills = () => {
           <SiTailwindcss size={size} title='Tailwind'/>
         </div>
       </div>
+      
+      {/* SiJest, SiVisualstudiocode, SiGit, SiVite, SiCypress, SiFirebase, SiFigma  */}
+      {/* <div className="grid w-full bg-blue-200 rounded-lg p-4 border-solid border-[3px] border-black place-items-center mt-4">
+      <p className="text-xl font-bold mb-[10px]">My Tools:</p>    
+      <div className="grid grid-flow-col gap-4 overflow-x-auto overscroll-contain md:w-[60%] w-[80%] ">
+            <SiJest size={size}/>
+            <SiVisualstudiocode size={size}/>
+            <SiGit size={size}/>
+            <SiVite size={size}/>
+            <SiCypress size={size}/>
+            <SiFirebase size={size}/>
+            <SiFigma size={size}/>
+        </div>
+      </div> */}
     </section>
   );
 };
