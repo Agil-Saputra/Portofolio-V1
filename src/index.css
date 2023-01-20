@@ -4,8 +4,8 @@
 
 strong {
   color :#FFA047;
-  background-color : #333;
-  border-radius : 3px;
+  /* background-color : #333;
+  border-radius : 3px; */
 }
 
 .btn {
@@ -64,7 +64,3 @@ strong {
   box-shadow: 0.4rem 0.3rem 0 0.3rem #56180A;
 }
 
-.body{
-  background-color : #FFFFF0;
-  color : #282422;
-}
