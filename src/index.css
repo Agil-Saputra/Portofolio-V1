@@ -2,65 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-strong {
-  color :#FFA047;
-  /* background-color : #333;
-  border-radius : 3px; */
-}
+
 
 .btn {
   /* Variables */
- --button_radius: 0.5em;
- --button_color: #FFA047;
- --button_outline_color: #56180A;
- font-size: 17px;
- font-weight: bold;
- border: none;
- border-radius: var(--button_radius);
- background: var(--button_outline_color);
+  --button_radius: 0.5em;
+  --button_color: #FFA047;
+  --button_outline_color: #56180A;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
 }
 
 .button_top {
- display: flex;
- align-items: center;
- gap: 5px;
- box-sizing: border-box;
- border: 2px solid var(--button_outline_color);
- border-radius: var(--button_radius);
- padding: 0.5em 1em;
- background: var(--button_color);
- color: var(--button_outline_color);
- transition: transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.5em 1em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transition: transform 0.1s ease;
 }
 
 .btn:hover .button_top {
   /* Pull the button upwards when hovered */
- transform: translateY(-0.33em);
+  transform: translateY(-0.33em);
 }
 
 .btn:active .button_top {
   /* Push the button downwards when pressed */
- transform: translateY(0);
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
-  .btn{
+  .btn {
     font-size: 12px;
   }
 }
 
 
-.link-hover:hover{
-  color :rgb(73,222,128);
-  background-color : #fff;
-  transform:translateY(-5px)
+.link-hover:hover {
+  color: rgb(73, 222, 128);
+  background-color: #fff;
+  transform: translateY(-5px)
 }
 
-.link-hover:active{
-  transform:translateY(5px)
+.link-hover:active {
+  transform: translateY(5px)
 }
 
-.spcl-shadow{
-  box-shadow: 0.4rem 0.3rem 0 0.3rem #56180A;
+
+
+.arrow {
+  position: relative;
+  top: 45%;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
 }
 
+.arrow-left {
+  left: -25px;
+  position: absolute;
+}
+
+.arrow-right {
+  right: -25px;
+  position: absolute;
+}

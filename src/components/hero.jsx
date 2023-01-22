@@ -15,7 +15,7 @@ const hero = () => {
       <p className="text-xl font-medium">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at</p>
     </div>
     <div className="flex items-center gap-4 mt-4">
-    <a className="btn" href="mailto:ragelyusuf752@gmail.com" target='_blank'>
+    <a className="btn shadow-2xl" href="mailto:ragelyusuf752@gmail.com" target='_blank'>
       <span className="button_top">Email Me<MdEmail size={20}/>
       </span>
       </a>
