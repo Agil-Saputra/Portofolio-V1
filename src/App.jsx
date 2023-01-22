@@ -1,14 +1,18 @@
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
-import Skills from "./components/skills";
-import Projects from "./components/projects";
+import Skills from "./components/skills/skills";
+import Projects from "./components/projects/projectApp";
 import Contact from "./components/contact";
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   return (
     <div className="">
       <Navbar />
-      <main className="md:px-[8rem] px-[2.75rem]">
+      <main className="md:px-[6.5rem] px-[1.5rem]">
         <Hero />
         <About />
         <Skills />

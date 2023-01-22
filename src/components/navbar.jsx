@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/Group 1.svg'
-import { FiDownload } from "react-icons/fi";
+import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 
@@ -15,18 +15,18 @@ setShowNav(!showNav)
 }
 
   return (
-    <nav className='flex items-center justify-between m-4 md:m-8'>
-         <img src={logo}/>
-         <ul className={(showNav ? "right-0" : "-right-full") + " md:flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[50%] text-center max-md:shadow-md shadow-slate-600 max-md:bg-slate-50"}
+    <nav className='flex items-center justify-between m-4 md:m-8 '>
+         <img src={logo} alt="Agil's Logo"/>
+         <ul className={(showNav ? "right-0" : "-right-full") + " md:flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[50%] text-center max-md:shadow-md shadow-slate-600 max-md:bg-slate-50 transition-all duration-300 ease-in-out"}
          >
          {items}
          </ul>
          <div className='flex items-center gap-4'>
-         <a className="btn " href="" target='_blank'>
-      <span className="button_top">Resume<FiDownload />
+         <a className="btn shadow-2xl" href="" target='_blank'>
+      <span className="button_top">Resume<BsFillArrowUpRightCircleFill />
       </span>
       </a>
-       {!showNav ? <FaBars size={30} className="z-10 block md:hidden cursor-pointer" onClick={handleClick}/> : <CgClose size={30} className="z-10 block md:hidden cursor-pointer fixed right-4" onClick={handleClick}/>}
+       {!showNav ? <FaBars size={30} className="z-10 block md:hidden cursor-pointer" onClick={handleClick}/> : <CgClose size={30} className="z-10 block md:hidden cursor-pointer" onClick={handleClick}/>}
          </div>
     </nav>
   )
