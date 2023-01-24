@@ -34,7 +34,7 @@ const projectApp = () => {
 
   return (
     <>
-        <h1 className='text-[3rem] font-bold text-green-400 mt-24'>Some Things I’ve Built</h1>
+        <h1 className='text-[3rem] font-bold text-green-400 md:mt-24 mt-12'>Some Things I’ve Built</h1>
     <Slider {...settings} >
       <Project 
       img="https://images.unsplash.com/photo-1674231313303-ab9bd1196390?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
