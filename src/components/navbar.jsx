@@ -17,7 +17,7 @@ setShowNav(!showNav)
   return (
     <nav className='flex items-center justify-between m-4 md:m-8 '>
          <img src={logo} alt="Agil's Logo"/>
-         <ul className={(showNav ? "right-0" : "-right-full") + " md:flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[50%] text-center max-md:shadow-md shadow-slate-600 max-md:bg-slate-50 transition-all duration-300 ease-in-out"}
+         <ul className={(showNav ? "right-0 shadow-[0_0_0_10000px_rgba(0,0,0,0.5)]" : "-right-full") + " z-20 md:flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[50%] text-center max-md:bg-slate-50 transition-all duration-300 ease-in-out"}
          >
          {items}
          </ul>
@@ -26,7 +26,7 @@ setShowNav(!showNav)
       <span className="button_top">Resume<BsFillArrowUpRightCircleFill />
       </span>
       </a>
-       {!showNav ? <FaBars size={30} className="z-10 block md:hidden cursor-pointer" onClick={handleClick}/> : <CgClose size={30} className="z-10 block md:hidden cursor-pointer" onClick={handleClick}/>}
+       {!showNav ? <FaBars size={30} className="z-30 block md:hidden cursor-pointer" onClick={handleClick}/> : <CgClose size={30} className="z-30 block md:hidden cursor-pointer" onClick={handleClick}/>}
          </div>
     </nav>
   )
