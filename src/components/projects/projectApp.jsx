@@ -9,7 +9,7 @@ const projectApp = () => {
     const { onClick } = props;
     return (
       <div className="arrow arrow-right" onClick={onClick}>
-        <BsArrowRightCircleFill size={30} className="shadow-lg rounded-[50%]"/>
+        <BsArrowRightCircleFill size={30} className="shadow-lg rounded-[50%] hover"/>
       </div>
     );
   }
@@ -18,7 +18,7 @@ const projectApp = () => {
     const { onClick } = props;
     return (
       <div className="arrow arrow-left" onClick={onClick}>
-        <BsArrowLeftCircleFill size={30} className="shadow-lg rounded-[50%]"/>
+        <BsArrowLeftCircleFill size={30} className="shadow-lg rounded-[50%] hover"/>
       </div>
     );
   }
