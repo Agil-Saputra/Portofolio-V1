@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 *{scroll-behavior:smooth}.btn{--button_radius: 0.5em;--button_color: #FFA047;--button_outline_color: #56180A;font-size:17px;font-weight:bold;border:none;border-radius:var(--button_radius);background:var(--button_outline_color)}.button_top{display:flex;align-items:center;gap:5px;box-sizing:border-box;border:2px solid var(--button_outline_color);border-radius:var(--button_radius);padding:.5em 1em;background:var(--button_color);color:var(--button_outline_color);transition:transform .1s ease}.btn:hover .button_top{transform:translateY(-0.33em)}.btn:active .button_top{transform:translateY(0)}@media(max-width: 768px){.btn{font-size:12px}}.link-hover:hover{color:#49de80;background-color:#fff;transform:translateY(-5px)}.link-hover:active{transform:translateY(5px)}.arrow{position:relative;top:45%;cursor:pointer;z-index:10;border-radius:50%}.arrow-left{left:-25px;position:absolute}.arrow-right{right:-25px;position:absolute}.hover{@apply transition-all duration-200 ease-in-out}.hover:hover{@apply -translate-y-1}.hover:active{@apply translate-y-0}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 5px;
+    width: 0px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
