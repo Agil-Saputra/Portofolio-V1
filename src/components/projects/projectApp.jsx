@@ -18,7 +18,7 @@ const projectApp = () => {
     const { onClick } = props;
     return (
       <div className="arrow arrow-left" onClick={onClick}>
-        <BsArrowLeftCircleFill size={30} className="shadow-lg rounded-[50%] hover"/>
+        <BsArrowLeftCircleFill size={30} className="shadow-lg rounded-[50%] hoverq"/>
       </div>
     );
   }
