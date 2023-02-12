@@ -7,7 +7,7 @@ const projects = (props) => {
   const listTech = techs.map(tech => <p className='flex items-center font-bold text-xl' key={tech}><TiArrowForward />{tech}</p>)
 
   return (
-    <div className='mt-[1rem] mx-6 py-12 ' id='Projects'>
+    <div className='mt-[1rem] mx-6 py-12 cursor-grab active:cursor-grabbing' id='Projects'>
     <div className='grid lg:grid-cols-4 grid-cols-1 items-start'>
 
     <div className='text-left p-4 '>
@@ -16,7 +16,7 @@ const projects = (props) => {
           </div>
           
     <div className='w-full col-span-2 rounded-lg shadow-xl'>
-      <img src={img} className='h-full rounded-lg w-full object-cover shadow-lg' alt='Project Preview'/>
+      <img src={img} className='h-full rounded-lg w-full object-cover shadow-lg' alt='Project Preview' />
     </div>
 
 
