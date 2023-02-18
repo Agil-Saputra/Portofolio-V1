@@ -8,7 +8,7 @@ import { CgClose } from "react-icons/cg";
 
 const navbar = () => {
 const lists = ['Home', 'About', 'Projects',  'Contact']
-const items = lists.map(item => <li key={item} className="transition duration-300 ease-in-out cursor-pointer md:my-0 my-[4rem] hover:bg-green-300 px-[10px] py-[5px] hover:-translate-y-1 rounded-xl hover:text-slate-600"><a href={"#"+item}>{item}</a></li>)
+const items = lists.map(item => <a href={"#"+item} key={item}><li className="transition duration-300 ease-in-out cursor-pointer md:my-0 my-[4rem] hover:bg-green-300 px-[10px] py-[5px] hover:-translate-y-1 rounded-xl hover:text-slate-600">{item}</li></a>)
 const [showNav, setShowNav] = useState(false)
 function handleClick() {
 setShowNav(!showNav)

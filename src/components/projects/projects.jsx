@@ -12,11 +12,11 @@ const projects = (props) => {
 
     <div className='text-left p-4 '>
     <p className='font-bold text-green-600 text-2xl mb-4'>About Project</p>
-      <p className='font-medium '><strong className='font-bold text-xl text-title'>{title}</strong> {description}</p>
-          </div>
+    <p className='font-medium '><strong className='font-bold text-xl text-title'>{title}</strong> {description}</p>
+    </div>
           
     <div className='w-full col-span-2 rounded-lg shadow-xl'>
-      <img src={img} className='h-full rounded-lg w-full object-cover shadow-lg' alt='Project Preview' />
+      <img width={500} height={400} src={img} className='h-full rounded-lg w-full object-cover shadow-lg' alt='Project Preview' />
     </div>
 
 
@@ -41,3 +41,4 @@ const projects = (props) => {
 }
 
 export default projects
+
