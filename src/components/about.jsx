@@ -1,6 +1,5 @@
 import React from "react";
 import profile from "../assets/Group 9.png"
-import Skeleton from 'react-loading-skeleton'
 
 const about = () => {
   return (
