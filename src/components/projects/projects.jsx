@@ -2,6 +2,7 @@ import React from 'react'
 import { BsGithub, BsArrowUpRightCircle } from "react-icons/bs";
 import { TiArrowForward } from "react-icons/ti"
 
+
 const projects = (props) => {
   const {img, title, description, techs, github, live} = props
   const listTech = techs.map(tech => <p className='flex items-center font-bold text-xl' key={tech}><TiArrowForward />{tech}</p>)

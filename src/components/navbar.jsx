@@ -22,7 +22,7 @@ setShowNav(!showNav)
          {items}
          </ul>
          <div className='flex items-center gap-4'>
-         <a className="btn shadow-2xl" href="" target='_blank'>
+         <a className="btn shadow-2xl" href="https://drive.google.com/file/d/171__TG4CLfvQCuEwzSTk5EV-vb6zuHiW/view" target='_blank'>
       <span className="button_top">Resume<BsFillArrowUpRightCircleFill />
       </span>
       </a>
