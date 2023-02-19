@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/Group 9.png"
+import profile from "../assets/Group 9.webp"
 
 const about = () => {
   return (

@@ -4,7 +4,7 @@ import Project from "./projects";
 import Slider from "react-slick";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-import bookmark from "../../assets/projects/Frame 1.png"
+import bookmark from "../../assets/projects/Frame 1.webp"
 
 const projectApp = () => {
   function SampleNextArrow(props) {
