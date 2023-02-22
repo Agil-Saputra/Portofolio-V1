@@ -1,5 +1,4 @@
 import React from "react";
-import profile from "../assets/Group 9.webp"
 
 const about = () => {
   return (
@@ -14,7 +13,14 @@ const about = () => {
           Fast-forward to today, and I’ve had the privilege of working at a
         </p>
     </div>
-        <img width={300} height={300} src={profile} className='w-[300px] transition duration-200 ease-in-out border-solid border-[7px] border-title shadow-xl rounded-[50%] hover:-translate-y-3 object-cover' alt="Agil's Profile Photo"/>
+        <img
+        width={300} 
+        height={300} 
+        src="https://ik.imagekit.io/tmfvonaed/Group_9__3_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676996451119" 
+        className='w-[300px] transition duration-200 ease-in-out border-solid border-[7px] border-title shadow-xl rounded-[50%] hover:-translate-y-3 object-cover' 
+        alt="Agil's Profile Photo"
+        />
+   
     </section>
   );
 };

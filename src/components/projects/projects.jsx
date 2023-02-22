@@ -17,7 +17,13 @@ const projects = (props) => {
     </div>
           
     <div className='w-full col-span-2 rounded-lg shadow-xl'>
-      <img width={500} height={400} src={img} className='h-full rounded-lg w-full object-cover shadow-lg' alt='Project Preview' />
+      <img
+      width={500} 
+      height={280} 
+      src={img} 
+      className='h-full rounded-lg w-full object-cover shadow-lg' 
+      alt='Project Preview' 
+      />
     </div>
 
 
