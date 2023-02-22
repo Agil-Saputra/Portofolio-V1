@@ -22,6 +22,7 @@ const hero = () => {
       <a href="https://www.linkedin.com/in/agil-saputra07" target='_blank' className="transition duration-200 ease-in-out rounded-[50%] link-hover"><SiLinkedin size={35}/></a>
       <a href="https://github.com/Agil-Saputra" target='_blank' className="transition duration-200 ease-in-out rounded-[50%] link-hover"><BsGithub size={35}/></a>
      </div>
+    
     </section>
   );
 };

@@ -7,8 +7,8 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import bookmark from "../../assets/projects/Frame 1.webp"
 
 const projectApp = () => {
-  function SampleNextArrow(props) {
-    const { onClick } = props;
+  
+  function SampleNextArrow({ onClick }) {
     return (
       <div className="arrow arrow-right" onClick={onClick}>
         <BsArrowRightCircleFill size={30} className="shadow-lg rounded-[50%] hover"/>
@@ -16,8 +16,7 @@ const projectApp = () => {
     );
   }
 
-  function SamplePrevArrow(props) {
-    const { onClick } = props;
+  function SamplePrevArrow({ onClick }) {
     return (
       <div className="arrow arrow-left" onClick={onClick}>
         <BsArrowLeftCircleFill size={30} className="shadow-lg rounded-[50%] hover"/>
@@ -39,7 +38,7 @@ const projectApp = () => {
         <h1 className='text-[3rem] font-bold text-green-400 md:mt-24 mt-12'>Some Things I’ve Built</h1>
     <Slider {...settings} >
       <Project
-      img={bookmark}
+      img="https://ik.imagekit.io/tmfvonaed/Frame_1.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676996418729"
       title="Simple Bookmark Landing Page"
       description="this landing page allows user to interact with incredible animations and interactive components while get the information from this website, this kind of landing page is perfect for bussiness or organizations purpose."
       techs={["React", "Tailwind CSS", "Framer Motion", "Vitejs"]}
