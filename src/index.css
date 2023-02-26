@@ -14,7 +14,8 @@
     font-weight: bold;
     border: none;
     border-radius: var(--button_radius);
-    background: var(--button_outline_color)
+    background: var(--button_outline_color);
+    @apply max-md:text-[12px]
 }
 
 .button_top {
@@ -27,31 +28,21 @@
     padding: .5em 1em;
     background: var(--button_color);
     color: var(--button_outline_color);
-    transition: transform .1s ease
+    transition: transform .1s ease;
 }
 
 .btn:hover .button_top {
-    transform: translateY(-0.33em)
+    transform: translateY(-0.33em);
 }
 
 .btn:active .button_top {
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
-@media(max-width: 768px) {
-    .btn {
-        font-size: 12px
-    }
+.projects-dots{
+    @apply bg-green-500
 }
 
-.link-hover:hover {
-    color: #49de80;
-    transform: translateY(-5px)
-}
-
-.link-hover:active {
-    transform: translateY(5px)
-}
 
 .arrow {
     position: relative;
@@ -59,7 +50,6 @@
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    @apply bg-green-300
 }
 
 .arrow-left {
@@ -67,21 +57,18 @@
     position: absolute
 }
 
+.arrow-left-img {
+    left: 5px;
+    position: absolute
+}
+
 .arrow-right {
     right: -25px;
     position: absolute
 }
-
-.hover {
-    @apply transition-all duration-200 ease-in-out
-}
-
-.hover:hover {
-    @apply -translate-y-1
-}
-
-.hover:active {
-    @apply translate-y-0
+.arrow-right-img {
+    right: 5px;
+    position: absolute
 }
 
 ::-webkit-scrollbar {
@@ -96,6 +83,16 @@
     box-shadow: 0 0 1px rgba(255, 255, 255, .5)
 }
 
-span{
-    @apply text-white bg-green-300
+strong{
+    position: relative;
+}
+
+strong::before{
+content: '';
+width: 100%;
+position: absolute;
+height: 110%;
+background-color: #49de80;
+z-index: -1;
+rotate: 2deg;
 }
