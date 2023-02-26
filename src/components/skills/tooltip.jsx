@@ -7,10 +7,12 @@ import 'tippy.js/dist/backdrop.css';
 import 'tippy.js/animations/shift-away.css';
 import 'tippy.js/animations/scale.css'
 
+import { motion } from 'framer-motion';
+
 const tooltip = ({title, children}) => {
 
   const Icon = forwardRef((props, ref) => {
-    return <div ref={ref} className="hover:text-white smooth">{children}</div>
+    return <motion.div whileHover={{scale: 0.95}} ref={ref} className="hover:text-white smooth">{children}</motion.div>
   });
 
   return (

@@ -1,6 +1,10 @@
 import React from "react";
 import Tooltip from "./tooltip";
-import { SiJavascript, SiTypescript, SiRedux, SiSass, SiBootstrap, SiNodedotjs, SiTailwindcss, SiReact } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiRedux, SiSass, SiBootstrap, SiTailwindcss, SiReact, SiNextdotjs} from "react-icons/si";
+
+// import all animation
+import { motion } from "framer-motion";
+import { container, set, item } from "../utils/motion";
 
 const skills = () => {
   const size = 40;
@@ -18,10 +22,6 @@ const skills = () => {
       title: "Bootstrap",
     },
     {
-      icon: <SiNodedotjs size={size} />,
-      title: "NodeJS",
-    },
-    {
       icon: <SiTailwindcss size={size} />,
       title: "Tailwind",
     },
@@ -37,17 +37,21 @@ const skills = () => {
       icon: <SiReact size={size} />,
       title: "React",
     },
+    {
+      icon: <SiNextdotjs size={size} />,
+      title: "NextJS",
+    },
   ];
 
 
   return (
     <section>
-      <div className="grid w-full bg-red-200 rounded-lg p-4 border-solid border-[3px] border-black place-items-center shadow-xl">
-        <p className="text-xl font-bold mb-[10px]">Few technologies I’ve been working with recently:</p>
-        <div className="grid grid-flow-col gap-4 overflow-x-auto overscroll-contain md:w-[60%] w-[80%] ">
+      <motion.div variants={container} {...set} className="grid w-full bg-red-200 rounded-lg p-4 border-solid border-[3px] border-black place-items-center shadow-xl">
+        <motion.p variants={item(0.5)} className="text-xl font-bold mb-[10px]">Few technologies I’ve been working with recently:</motion.p>
+        <motion.div variants={item(0.7)} className="grid grid-flow-col gap-4 overflow-x-auto overscroll-contain md:w-[60%] w-[80%] ">
         {icons.map(icon => <Tooltip key={icon.title} children={icon.icon} title={icon.title}/>)}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

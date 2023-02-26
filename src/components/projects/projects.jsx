@@ -1,36 +1,87 @@
-import React from 'react'
+// import all necessary iconss
 import { BsGithub, BsArrowUpRightCircle } from "react-icons/bs";
-import { TiArrowForward } from "react-icons/ti"
+import { IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
+import { TiArrowForward} from "react-icons/ti";
 
+// import all animations
+import { motion } from "framer-motion";
+import { container, set, itemUp } from "../utils/motion";
 
-const projects = (props) => {
-  const {img, title, description, techs, github, live} = props
-  const listTech = techs.map(tech => <p className='flex items-center font-bold text-xl' key={tech}><TiArrowForward />{tech}</p>)
+// import slider from slick 
+import Slider from "react-slick";
+
+const projects = ({images, title, description, techs, github, live}) => {
+  const listTech = techs.map(tech => <motion.p variants={itemUp(0.4)} className='flex items-center font-bold text-xl' key={tech}><TiArrowForward />{tech}</motion.p>)
+
+  function NextArrow({ onClick }) {
+    return (
+      <motion.div {...hover} className="arrow arrow-right-img" onClick={onClick}>
+        <IoIosArrowForward {...icon}/>
+      </motion.div>
+    );
+  }
+
+  function PrevArrow({ onClick }) {
+    return (
+      <motion.div {...hover} className="arrow arrow-left-img" onClick={onClick}>
+        <IoIosArrowBack {...icon}/>
+      </motion.div>
+    );
+  }
+
+  const hover = {
+    whileHover: {scale: 1.4},
+    whileTap: {scale: 1}
+  }
+
+  const icon = {
+    size: 25,
+    className: 'bg-white rounded-[30px]'
+  }
+
+  const settings ={
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 100,
+    autoplayspeed: 50,
+    draggable: false,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    lazyLoad: "onDemand",
+  }
 
   return (
     <div className='mt-[1rem] mx-6 py-12 cursor-grab active:cursor-grabbing' id='Projects'>
     <div className='grid lg:grid-cols-4 grid-cols-1 items-start'>
 
-    <div className='text-left p-4 '>
-    <p className='font-bold text-green-600 text-2xl mb-4'>About Project</p>
-    <p className='font-medium '><strong className='font-bold text-xl text-title'>{title}</strong> {description}</p>
-    </div>
+    <motion.div {...set} variants={container} className='text-left p-4 '>
+    <motion.p variants={itemUp(0.3)} className='font-bold text-green-600 text-2xl mb-4'>About Project</motion.p>
+    <motion.p variants={itemUp(0.4)} className='font-medium '><span className='font-bold text-xl text-title'>{title}</span> {description}</motion.p>
+    </motion.div>
           
-    <div className='w-full col-span-2 rounded-lg shadow-xl'>
-      <img
+    <motion.div {...set} variants={itemUp(0.5)} className='w-full col-span-2 rounded-lg shadow-xl'>
+    <Slider {...settings}  >
+    {images.map(img =>  {
+      return( <img 
       width={500} 
       height={280} 
       src={img} 
-      className='h-full rounded-lg w-full object-cover shadow-lg' 
+      className='h-[340px] rounded-lg w-full object-cover shadow-lg' 
       alt='Project Preview' 
-      />
-    </div>
+      />)
+    })}
+     
+      </Slider>
+    </motion.div>
 
 
-    <div className='text-left p-4'>
-      <h2 className='font-bold text-green-600 text-2xl mb-4'>Technologies That I’ve use:</h2>
+    <motion.div {...set} variants={container} className='text-left p-4'>
+      <motion.h2 variants={itemUp(0.5)} className='font-bold text-green-600 text-2xl mb-4'>Technologies That I’ve use:</motion.h2>
       {listTech}
-      <div className='md:mt-8 mt-0 flex gap-4 '>
+      <motion.div variants={itemUp(0.6)} className='md:mt-8 mt-0 flex gap-4 '>
           <a className="btn my-[1rem] shadow-2xl" href={github} target='_blank'>
       <span className="button_top">View Code<BsGithub size={30}/>
       </span>
@@ -39,8 +90,8 @@ const projects = (props) => {
       <span className="button_top">Live Site<BsArrowUpRightCircle size={30}/>
       </span>
       </a>
-    </div>
-    </div>
+    </motion.div>
+    </motion.div>
 
     </div>
     </div>
