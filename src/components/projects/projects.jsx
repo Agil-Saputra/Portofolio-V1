@@ -44,9 +44,9 @@ const projects = ({images, title, description, techs, github, live}) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     speed: 100,
-    // autoplayspeed: 50,
+    autoplayspeed: 50,
     draggable: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -70,7 +70,6 @@ const projects = ({images, title, description, techs, github, live}) => {
       <img
       width={500} 
       height={280} 
-      // img.map(src => "https:" + src.fields.file.url)
       src={"https:" + img.fields.file.url} 
       className='h-[340px] rounded-lg w-full object-cover shadow-lg' 
       alt='Project Preview' 
