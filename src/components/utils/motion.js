@@ -61,6 +61,10 @@ export const container = () =>  ({
     hidden: {
       opacity: 0,
       y: 100,
+      transition: {
+        stiffness: 1,
+        type: "spring",e
+      }
     },
     show: {
       opacity: 1,

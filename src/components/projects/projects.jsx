@@ -15,7 +15,7 @@ const projects = ({images, title, description, techs, github, live}) => {
 
   function NextArrow({ onClick }) {
     return (
-      <motion.div {...hover} className="arrow arrow-right-img" onClick={onClick}>
+      <motion.div {...hover} className="arrow arrow-right-img " onClick={onClick}>
         <IoIosArrowForward {...icon}/>
       </motion.div>
     );
@@ -30,13 +30,13 @@ const projects = ({images, title, description, techs, github, live}) => {
   }
 
   const hover = {
-    whileHover: {scale: 1.4},
+    whileHover: {scale: 1.4, },
     whileTap: {scale: 1}
   }
 
   const icon = {
     size: 25,
-    className: 'bg-white rounded-[30px]'
+    className: 'bg-white rounded-[30px] hover:bg-green-300'
   }
 
   const settings ={
@@ -44,9 +44,9 @@ const projects = ({images, title, description, techs, github, live}) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 100,
-    autoplayspeed: 50,
+    // autoplayspeed: 50,
     draggable: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -64,13 +64,17 @@ const projects = ({images, title, description, techs, github, live}) => {
           
     <motion.div {...set} variants={itemUp(0.5)} className='w-full col-span-2 rounded-lg shadow-xl'>
     <Slider {...settings}  >
-    {images.map(img =>  {
-      return( <img 
+    {images.map((img, i) =>  {
+      {console.log(img)}
+      return( 
+      <img
       width={500} 
       height={280} 
-      src={img} 
+      // img.map(src => "https:" + src.fields.file.url)
+      src={"https:" + img.fields.file.url} 
       className='h-[340px] rounded-lg w-full object-cover shadow-lg' 
       alt='Project Preview' 
+      key={i}
       />)
     })}
      
