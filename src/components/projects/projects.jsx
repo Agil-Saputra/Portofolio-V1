@@ -54,10 +54,10 @@ const projects = ({images, title, description, techs, github, live}) => {
   }
 
   return (
-    <div className='mt-[1rem] mx-6 py-12 cursor-grab active:cursor-grabbing' id='Projects'>
+    <div className='mt-[1rem] md:mx-6 mx-2 py-12 cursor-grab active:cursor-grabbing' id='Projects'>
     <div className='grid lg:grid-cols-4 grid-cols-1 items-start'>
 
-    <motion.div {...set} variants={container} className='text-left p-4 '>
+    <motion.div {...set} variants={container} className='text-left p-4'>
     <motion.p variants={itemUp(0.3)} className='font-bold text-green-600 text-2xl mb-4'>About Project</motion.p>
     <motion.p variants={itemUp(0.4)} className='font-medium '><span className='font-bold text-xl text-title'>{title}</span> {description}</motion.p>
     </motion.div>
@@ -65,13 +65,12 @@ const projects = ({images, title, description, techs, github, live}) => {
     <motion.div {...set} variants={itemUp(0.5)} className='w-full col-span-2 rounded-lg shadow-xl'>
     <Slider {...settings}  >
     {images.map((img, i) =>  {
-      {console.log(img)}
       return( 
       <img
       width={500} 
       height={280} 
       src={"https:" + img.fields.file.url} 
-      className='h-[340px] rounded-lg w-full object-cover shadow-lg' 
+      className='md:h-[350px] 2xl:h-full rounded-lg w-full object-cover shadow-lg' 
       alt='Project Preview' 
       key={i}
       />)
