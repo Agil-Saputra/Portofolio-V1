@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 import { motion } from "framer-motion";
-import { item } from "../utils/motion";
 
 const projectApp = ({data}) => {
   
@@ -69,6 +68,3 @@ const datas = data.items
 };
 
 export default projectApp;
-// ["https://ik.imagekit.io/tmfvonaed/Frame_1.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676996418729", "https://images.unsplash.com/photo-1674231313303-ab9bd1196390?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"]
-
-// masok?.map(item => item.map(item2 => (["https:" + item2.fields.file.url])))
