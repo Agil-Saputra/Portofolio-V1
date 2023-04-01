@@ -47,8 +47,8 @@ const skills = () => {
   return (
     <section>
       <motion.div variants={container} {...set} className="grid w-full bg-red-200 rounded-lg p-4 border-solid border-[3px] border-black place-items-center shadow-xl">
-        <motion.p variants={item(0.5)} className="text-xl font-bold mb-[10px]">Few technologies I’ve been working with recently:</motion.p>
-        <motion.div variants={item(0.7)} className="grid grid-flow-col gap-4 overflow-x-auto overscroll-contain md:w-[60%] w-[80%] ">
+        <motion.p variants={item(0.2)} className="text-xl font-bold mb-[10px]">Few technologies I’ve been working with recently:</motion.p>
+        <motion.div variants={item(0.3)} className="grid grid-flow-col gap-4 overflow-x-auto overscroll-contain md:w-[60%] w-[80%] ">
         {icons.map(icon => <Tooltip key={icon.title} children={icon.icon} title={icon.title}/>)}
         </motion.div>
       </motion.div>

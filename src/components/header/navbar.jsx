@@ -21,9 +21,9 @@ setShowNav(!showNav)
 }, [showNav]) 
 
   return (
-    <motion.header {...set} variants={itemUp(0.4)} className='flex items-center justify-between m-4 md:m-8 overflow-hidden'>
-         <img src={logo} alt="Agil's Logo" width={40} height={40}/>
-         <nav onClick={showNav ? handleClick : null} className={(showNav ? "right-0 shadow-[0_0_0_10000px_rgba(0,0,0,0.5)]" : "-right-full") + " z-20 flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[50%] text-center max-md:bg-slate-50 transition-all duration-300 ease-in-out max-md:pt-[4rem]"}
+    <motion.header {...set} variants={itemUp(0.3)} className='flex items-center justify-between m-4 md:m-8 overflow-hidden'>
+         <img src={logo} alt="Agil's Logo" width={40} height={40} className='max-md:w-[30px]'/>
+         <nav onClick={showNav ? handleClick : null} className={(showNav ? "right-0 shadow-[0_0_0_10000px_rgba(0,0,0,0.5)]" : "-right-full") + " z-20 flex flex-col md:flex-row md:gap-[3rem] font-medium max-md:fixed right-0 top-0 h-[100%] max-md:w-[60%] text-center max-md:bg-slate-50 transition-all duration-300 ease-in-out max-md:pt-[4rem]"}
          >
          {items}
          </nav>

@@ -8,10 +8,10 @@ const about = ({data}) => {
   const profileSrc = data.profile?.fields.file.url
 
   return (
-    <section className="my-[6rem] flex max-md:flex-col gap-4 items-center justify-between" id="About">
+    <section className="md:my-[6rem] my-[3rem] flex max-md:flex-col gap-4 items-center justify-between" id="About">
     <motion.div variants={container} {...set}>
-  <motion.h1 variants={item(0.4)} className="text-[3rem] text-green-400 font-bold my-4">About Me</motion.h1>
-        <motion.p variants={item(0.6)} className="mt-4 text-xl font-medium" dangerouslySetInnerHTML={{__html: data.about}}>
+  <motion.h1 variants={item(0.2)} className="title my-4">About Me</motion.h1>
+        <motion.p variants={item(0.3)} className="mt-4 paraf" dangerouslySetInnerHTML={{__html: data.about}}>
         </motion.p>
     </motion.div>
         <motion.img
