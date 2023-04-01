@@ -7,6 +7,8 @@ import { CgClose } from "react-icons/cg";
 import { motion } from 'framer-motion';
 import { itemUp, set } from '../utils/motion';
 
+import Button from '../ui/button';
+
 
 const navbar = () => {
 const lists = ['Home', 'About', 'Projects',  'Contact']
@@ -28,12 +30,7 @@ setShowNav(!showNav)
          {items}
          </nav>
          <div className='flex items-center gap-4'>
-         <a className="btn shadow-2xl" href="https://drive.google.com/file/d/171__TG4CLfvQCuEwzSTk5EV-vb6zuHiW/view" target='_blank'>
-      <span className="button_top">
-      Resume
-      <BsFillArrowUpRightCircleFill />
-      </span>
-      </a>
+       <Button title="Resume" icon={<BsFillArrowUpRightCircleFill />} href="https://drive.google.com/file/d/171__TG4CLfvQCuEwzSTk5EV-vb6zuHiW/view"/>
        {!showNav ? <FaBars size={30} className="z-30 block md:hidden cursor-pointer" onClick={handleClick}/> : <CgClose size={30} className="z-30 block md:hidden cursor-pointer" onClick={handleClick}/>}
          </div>
     </motion.header>
