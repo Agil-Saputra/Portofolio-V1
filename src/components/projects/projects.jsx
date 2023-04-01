@@ -10,6 +10,8 @@ import { container, set, itemUp } from "../utils/motion";
 // import slider from slick 
 import Slider from "react-slick";
 
+import Button from "../ui/button";
+
 const projects = ({images, title, description, techs, github, live}) => {
   const listTech = techs.map(tech => <motion.p variants={itemUp(0.4)} className='flex items-center font-bold text-xl' key={tech}><TiArrowForward />{tech}</motion.p>)
 
@@ -54,12 +56,15 @@ const projects = ({images, title, description, techs, github, live}) => {
   }
 
   return (
-    <div className='mt-[1rem] md:mx-6 mx-2 py-12 cursor-grab active:cursor-grabbing' id='Projects'>
+    <div className='mt-[1rem] md:mx-6 mx-2 md:py-12 cursor-grab active:cursor-grabbing' id='Projects'>
     <div className='grid lg:grid-cols-4 grid-cols-1 items-start'>
 
-    <motion.div {...set} variants={container} className='text-left p-4'>
-    <motion.p variants={itemUp(0.3)} className='font-bold text-green-600 text-2xl mb-4'>About Project</motion.p>
-    <motion.p variants={itemUp(0.4)} className='font-medium '><span className='font-bold text-xl text-title'>{title}</span> {description}</motion.p>
+    <motion.div {...set} variants={container} className='text-left py-4 md:px-4'>
+    <motion.p variants={itemUp(0.2)} className='font-bold text-green-600 text-2xl mb-4'>About Project</motion.p>
+    <motion.p variants={itemUp(0.3)} className='font-medium'>
+    <span className='font-bold text-xl text-title'>{title} </span> 
+    <span  dangerouslySetInnerHTML={{__html: description}}></span>
+    </motion.p>
     </motion.div>
           
     <motion.div {...set} variants={itemUp(0.5)} className='w-full col-span-2 rounded-lg shadow-xl'>
@@ -80,18 +85,12 @@ const projects = ({images, title, description, techs, github, live}) => {
     </motion.div>
 
 
-    <motion.div {...set} variants={container} className='text-left p-4'>
+    <motion.div {...set} variants={container} className='text-left py-4 md:px-4'>
       <motion.h2 variants={itemUp(0.5)} className='font-bold text-green-600 text-2xl mb-4'>Technologies That I’ve use:</motion.h2>
       {listTech}
       <motion.div variants={itemUp(0.6)} className='md:mt-8 mt-0 flex gap-4 '>
-          <a className="btn my-[1rem] shadow-2xl" href={github} target='_blank'>
-      <span className="button_top">View Code<BsGithub size={30}/>
-      </span>
-      </a>
-          <a className="btn my-[1rem] shadow-2xl" href={live} target='_blank'>
-      <span className="button_top">Live Site<BsArrowUpRightCircle size={30}/>
-      </span>
-      </a>
+      <Button title='View Code' icon={<BsGithub size={30} />} link={github}/>
+      <Button title='Live Site' icon={<BsArrowUpRightCircle size={30}/>} link={live}/>
     </motion.div>
     </motion.div>
 

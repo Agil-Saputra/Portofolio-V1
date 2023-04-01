@@ -84,17 +84,7 @@
 }
 
 strong{
-    position: relative;
-}
-
-strong::before{
-content: '';
-width: 100%;
-position: absolute;
-height: 110%;
-background-color: #49de80;
-z-index: -1;
-rotate: 2deg;
+    @apply relative bg-[#49de80]
 }
 
 .loader {
@@ -130,4 +120,17 @@ rotate: 2deg;
     40% {
       transform: scaleY(1);
     }
+  }
+
+  /* class for typography */
+  .h1 {
+    @apply md:text-[7rem] text-[3rem] font-bold max-md:leading-[3rem]
+  }
+
+  .title {
+    @apply md:text-[3rem] text-green-400 font-bold text-[2.4rem]
+  }
+
+  .paraf {
+   @apply md:text-xl font-medium text-[1rem]
   }

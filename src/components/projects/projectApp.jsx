@@ -47,7 +47,7 @@ const datas = data.items
 
   return (
     <>
-        <h1 className='text-[3rem] font-bold text-green-400 md:mt-24 mt-12'>Some Things I’ve Built</h1>
+        <h1 className='title md:mt-24 mt-12'>Some Things I’ve Built</h1>
     <Slider {...settings} >
 {datas?.map((item, i) => {
   return (
